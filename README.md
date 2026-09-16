@@ -1,1 +1,1 @@
-# vecka-1_exercise_OOP-Grund_Github
+# Detta är en övning för vecka 1 inom OOP!
