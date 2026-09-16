@@ -1,13 +1,9 @@
-public class BankAccount
+// abstract betyder att vi inte kan skapa ett BankAccount direkt.
+public abstract class BankAccount
 {
-    //Attributer
     public string Owner { get; set; } = "";
-    public decimal Balance { get; set; } 
+    public decimal Balance { get; set; }
 
-
-//metoder
-    public string Describe()
-    {
-        return $"Owner: {Owner}, Balance: {Balance:C}";
-    }
+    // Varje konkret underklass måste skriva sin egen Describe().
+    public abstract string Describe();
 }
