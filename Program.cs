@@ -1,4 +1,12 @@
-﻿BankAccount BankAccount1 = new BankAccount();
-BankAccount1.Owner = "Alice";
-BankAccount1.Balance = 1000;
-Console.WriteLine(BankAccount1.Describe());
+﻿// Båda objekten behandlas som BankAccount.
+BankAccount[] accounts =
+{
+    new SavingsAccount { Owner = "Alice", Balance = 1000 },
+    new CheckingAccount { Owner = "Bob", Balance = 500 }
+};
+
+foreach (BankAccount account in accounts)
+{
+    // Samma anrop kör olika Describe() beroende på objektets typ.
+    Console.WriteLine(account.Describe());
+}
