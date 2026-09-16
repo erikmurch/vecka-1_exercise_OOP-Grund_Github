@@ -1,4 +1,8 @@
-﻿BankAccount BankAccount1 = new BankAccount();
-BankAccount1.Owner = "Alice";
-BankAccount1.Balance = 1000;
-Console.WriteLine(BankAccount1.Describe());
+﻿SavingsAccount account = new SavingsAccount();
+
+account.Owner = "Alice";       // Ärvs från BankAccount.
+account.Balance = 1000;        // Ärvs från BankAccount.
+account.InterestRate = 0.05m; // 5 procent ränta.
+
+Console.WriteLine(account.Describe()); // Ärvs också.
+Console.WriteLine($"Ränta: {account.CalculateInterest():C}");
