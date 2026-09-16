@@ -6,7 +6,8 @@ public class BankAccount
 
 
 //metoder
-    public string Describe()
+//Virtual gör att subklasser kan skriva över metoden/skriva egna versioner av metoden
+    public virtual string Describe()
     {
         return $"Owner: {Owner}, Balance: {Balance:C}";
     }
